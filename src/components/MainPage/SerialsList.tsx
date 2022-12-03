@@ -36,7 +36,6 @@ export const SerialsList: React.FC<{
                     }
 
                     if (serial._links.nextepisode !== undefined) {
-                        console.log(serial.name)
                         axios(serial._links.nextepisode.href).then((res) => convertedSerial.airdate = res.data.airdate)
                     }
 

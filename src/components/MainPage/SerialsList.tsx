@@ -12,17 +12,18 @@ export const SerialsList: React.FC<{
     setSerialsCopy: any,
     serials: Serial[], serialsCopy: Serial[], setSelectedSerial: any, setActiveCard: any, setCurrentUser: any, setSearchTerm: any, searchTerm: string
 }>
-    = ({ user, setSerials, setSerialsCopy, serialsCopy, setSelectedSerial, setActiveCard, setCurrentUser, setSearchTerm, searchTerm}) => {
+    = ({ user, setSerials, setSerialsCopy, serialsCopy, setSelectedSerial, setActiveCard, setCurrentUser, setSearchTerm }) => {
 
         React.useEffect(() => {
-            axios("https://api.tvmaze.com/shows").then((res) => {
-                let test: Serial[] = res.data.map((serial: any) => {
+            axios("https://api.tvmaze.com/shows?status=Running").then((res) => {
+
+                let test2: Serial[] = res.data.map((serial: any) => {
                     let filteredSummary = serial.summary.replaceAll('<p>', '');
                     filteredSummary = filteredSummary.replaceAll('</p>', '');
                     filteredSummary = filteredSummary.replaceAll('<b>', '');
                     filteredSummary = filteredSummary.replaceAll('</b>', '');
 
-                    return {
+                    let convertedSerial = {
                         name: serial.name,
                         summary: filteredSummary,
                         image: serial.image.medium,
@@ -31,11 +32,19 @@ export const SerialsList: React.FC<{
                         rating: serial.rating.average,
                         premiered: serial.premiered,
                         bigImg: serial.image.original,
+                        airdate: undefined
                     }
+
+                    if (serial._links.nextepisode !== undefined) {
+                        console.log(serial.name)
+                        axios(serial._links.nextepisode.href).then((res) => convertedSerial.airdate = res.data.airdate)
+                    }
+
+                    return convertedSerial
                 })
 
-                setSerials(test)
-                setSerialsCopy(test)
+                setSerials(test2)
+                setSerialsCopy(test2)
             })
         }, [])
 

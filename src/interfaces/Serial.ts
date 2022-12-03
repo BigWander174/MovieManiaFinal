@@ -8,6 +8,7 @@ interface Serial{
     rating: number,
     timeDelay: string,
     bigImg:string,
+    airdate: string
 }
 
 export default Serial

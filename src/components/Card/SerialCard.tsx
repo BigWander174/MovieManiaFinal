@@ -29,6 +29,8 @@ export const SerialCard: React.FC<{ activeSerial: Serial | null }> = ({ activeSe
                     </tr>
                     </tbody>
                 </table>
+
+                <span>{activeSerial?.airdate}</span>
                 {/* <span>Premiered: <p> {activeSerial?.premiered}</p></span>
                 <span>Status: <p> {activeSerial?.status}</p></span>
                 <span>Genres: <p> {activeSerial?.genres}</p></span>

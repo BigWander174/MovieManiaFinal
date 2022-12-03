@@ -35,16 +35,6 @@
           "bigImg": "https://static.tvmaze.com/uploads/images/original_untouched/0/15.jpg"
         },
         {
-          "name": "Under the Dome",
-          "summary": "Under the Dome is the story of a small town that is suddenly and inexplicably sealed off from the rest of the world by an enormous transparent dome. The town's inhabitants must deal with surviving the post-apocalyptic conditions while searching for answers about the dome, where it came from and if and when it will go away.",
-          "image": "https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg",
-          "status": "Ended",
-          "genres": "Drama, Science-Fiction, Thriller",
-          "rating": 6.5,
-          "premiered": "2013-06-24",
-          "bigImg": "https://static.tvmaze.com/uploads/images/original_untouched/81/202627.jpg"
-        },
-        {
           "name": "Person of Interest",
           "summary": "You are being watched. The government has a secret system, a machine that spies on you every hour of every day. I know because I built it. I designed the Machine to detect acts of terror but it sees everything. Violent crimes involving ordinary people. People like you. Crimes the government considered \"irrelevant\". They wouldn't act so I decided I would. But I needed a partner. Someone with the skills to intervene. Hunted by the authorities, we work in secret. You'll never find us. But victim or perpetrator, if your number is up, we'll find you.",
           "image": "https://static.tvmaze.com/uploads/images/medium_portrait/163/407679.jpg",
@@ -53,6 +43,16 @@
           "rating": 8.8,
           "premiered": "2011-09-22",
           "bigImg": "https://static.tvmaze.com/uploads/images/original_untouched/163/407679.jpg"
+        },
+        {
+          "name": "Glee",
+          "summary": "Glee is a musical comedy about a group of ambitious and talented young adults in search of strength, acceptance and, ultimately, their voice.",
+          "image": "https://static.tvmaze.com/uploads/images/medium_portrait/0/73.jpg",
+          "status": "Ended",
+          "genres": "Drama, Music, Romance",
+          "rating": 6.5,
+          "premiered": "2009-05-19",
+          "bigImg": "https://static.tvmaze.com/uploads/images/original_untouched/0/73.jpg"
         }
       ],
       "id": 4
